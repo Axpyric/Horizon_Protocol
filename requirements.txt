@@ -1,0 +1,4 @@
+cryptography
+jsonschema
+PyYAML
+pytest

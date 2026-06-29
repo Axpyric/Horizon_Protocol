@@ -1,0 +1,7 @@
+{
+  "origin_manifest": "vault/fingerprints/asset-alpha/manifest.json",
+  "layers": {
+    "cadence": { "path": "examples/layers/cadence.json" },
+    "structure": { "path": "examples/layers/structure.json" }
+  }
+}

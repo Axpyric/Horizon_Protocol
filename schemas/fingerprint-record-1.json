@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HAKUMADI FingerprintRecord v1",
+  "type": "object",
+  "required": ["schema","record_id","origin_manifest","engine_version","layers"],
+  "properties": {
+    "schema":{"type":"string","const":"hakumadi-fingerprint-record-1"},
+    "record_id":{"type":"string"},
+    "origin_manifest":{"type":"string"},
+    "engine_version":{"type":"string"},
+    "layers":{"type":"object"}
+  }
+}

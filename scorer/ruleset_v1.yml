@@ -1,0 +1,10 @@
+version: "1.0.0"
+weights:
+  variance_score: 0.50
+  attribution_confidence: 0.30
+  provenance_depth: 0.20
+thresholds:
+  canonical: 0.90
+  trusted: 0.75
+  stable: 0.50
+  review: 0.30
