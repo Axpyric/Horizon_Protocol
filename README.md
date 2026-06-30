@@ -2,7 +2,9 @@
 
 # Hakumadi — an open protocol for cryptographic creative provenance
 
-Hakumadi is an open protocol for cryptographically verifiable creative provenance. This repository contains a reference implementation (demo) and the protocol documentation. The documentation lives in /docs — start with docs/SPECIFICATION.md.
+A cryptographic provenance protocol for structured creative artifacts and their verifiable production history.
+
+This repository contains a reference implementation (demo) and the protocol documentation. The documentation lives in /docs — start with docs/SPECIFICATION.md.
 
 Quick start (demo)
 1. python -m venv .venv
@@ -14,7 +16,7 @@ Quick start (demo)
 Docs
 - docs/SPECIFICATION.md — canonical protocol specification (required reading for implementers)
 - docs/MANIFEST_V1.md — manifest schema and examples
-- docs/ARCHITECTURE.md — architecture overview and deployment patterns
+- docs/ARCHITECTURE.md — architecture overview and execution model
 - docs/WHITEPAPER.md — concise whitepaper describing problem, approach, and roadmap
 
 License: Apache-2.0 — see LICENSE file for full terms.

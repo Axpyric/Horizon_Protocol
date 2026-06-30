@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.org/schemas/manifest_v1.schema.json",
+  "title": "Hakumadi Manifest v1",
+  "type": "object",
+  "required": ["protocol_version","manifest_hash","asset_id","creator_id","creative_blueprint","revision_chain","tool_disclosure","human_contribution_summary","asset_hash","signature"],
+  "properties": {
+    "protocol_version": { "type": "string", "const": "1.0" },
+    "manifest_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "asset_id": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "creator_id": { "type": "string" },
+    "creative_blueprint": {
+      "type": "object",
+      "required": ["genre_tags","structure","toolchain","ai_assistance"],
+      "properties": {
+        "genre_tags": { "type": "array", "items": { "type": "string" } },
+        "structure": { "type": "array", "items": { "type": "string" } },
+        "toolchain": { "type": "array", "items": { "type": "object" } },
+        "ai_assistance": { "type": "object", "required": ["used","tools"], "properties": { "used": { "type": "boolean" }, "tools": { "type": "array", "items": { "type": "object" } } } }
+      }
+    },
+    "revision_chain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["revision_id","timestamp","change_type","description"],
+        "properties": {
+          "revision_id": { "type": "string", "format": "uuid" },
+          "timestamp": { "type": "string", "format": "date-time" },
+          "change_type": { "type": "string", "enum": ["composition","mix","edit","arrangement"] },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "tool_disclosure": { "type": "array", "items": { "type": "string" } },
+    "human_contribution_summary": { "type": "object", "properties": { "percentage_estimate": { "type": ["number","null"] }, "notes": { "type": "string" } } },
+    "asset_hash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "signature": { "type": "string" }
+  }
+}
